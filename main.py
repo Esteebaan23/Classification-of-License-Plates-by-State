@@ -404,4 +404,3 @@ if uploaded_file is not None:
     #st.write(f"- **ViT**: {pred_label_vit}")
     st.write(f"- **Own CNN**: {pred_label_own}")
 
->>>>>>> 28530f42ac4f51e41d6aff3da18735083d353acf
