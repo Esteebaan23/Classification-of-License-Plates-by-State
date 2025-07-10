@@ -9,7 +9,6 @@ from glob import glob
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from torchvision import models, transforms, datasets
-import albumentations as A
 from albumentations.pytorch import ToTensorV2
 import cv2
 from tqdm import tqdm
