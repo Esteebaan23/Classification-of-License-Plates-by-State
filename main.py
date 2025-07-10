@@ -200,7 +200,7 @@ if uploaded_file is not None:
     #st.write(f"- **ViT**: {pred_label_vit}")
     st.write(f"- **Own CNN**: {pred_label_own}")
 
-=======
+
 import torch
 import torch.nn.functional as F
 from PIL import Image
