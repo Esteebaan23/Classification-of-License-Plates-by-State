@@ -27,7 +27,11 @@ resnet_model = resnet50(num_classes=56)
 resnet_model.load_state_dict(torch.load('resnet50_plates.pth', map_location=torch.device('cpu')))
 resnet_model.eval().to(device)
 
+from torchvision.models import densenet121
 
+densenet_model = densenet121(num_classes=56)
+densenet_model.load_state_dict(torch.load('densenet121_model_plates.pth', map_location=torch.device('cpu')))
+densenet_model.eval().to(device)
 
 import torch.nn.functional as F
 
@@ -173,23 +177,26 @@ if uploaded_file is not None:
 
     # transform image
     input_tensor_resnet = transform_resnet(image).unsqueeze(0).to(device)
-    input_tensor_Vit = transform_ViT(image).unsqueeze(0).to(device)
+    #input_tensor_Vit = transform_ViT(image).unsqueeze(0).to(device)
     input_tensor_Own = transform_Own(image).unsqueeze(0).to(device)
 
     # Inference
     with torch.no_grad():
         pred_resnet = resnet_model(input_tensor_resnet)
+        pred_denesnet = densenet_model(input_tensor_resnet)
         #pred_vit = vit_model(input_tensor_Vit)
         pred_own = own_model(input_tensor_Own)
 
     # Get label
     pred_label_resnet = class_names[torch.argmax(pred_resnet).item()]
+    pred__label_denesnet = class_names[torch.argmax(pred_denesnet).item()]
    # pred_label_vit = class_names[torch.argmax(pred_vit).item()]
     pred_label_own = class_names[torch.argmax(pred_own).item()]
 
     # Show results
     st.markdown("### Predictions:")
     st.write(f"- **ResNet50**: {pred_label_resnet}")
+    st.write(f"- **DenseNet121**: {pred__label_denesnet}")
     #st.write(f"- **ViT**: {pred_label_vit}")
     st.write(f"- **Own CNN**: {pred_label_own}")
 
