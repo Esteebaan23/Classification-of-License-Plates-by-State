@@ -11,16 +11,13 @@ from torch.utils.data import DataLoader
 from torchvision import models, transforms, datasets
 #import albumentations as A
 #from albumentations.pytorch import ToTensorV2
-#import cv2
+import cv2
 from tqdm import tqdm
 import pandas as pd
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score
 import seaborn as sns
 import timm
 import os
-
-if os.environ.get("USE_OPENCV", "0") == "1":
-    import cv2
 
 # Device
 device = "cpu"
