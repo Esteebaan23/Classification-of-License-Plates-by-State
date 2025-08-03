@@ -12,11 +12,11 @@ This project focuses on developing a deep learning system for recognizing U.S. l
 
 ## Models
 The following architectures were trained and evaluated:
-1. **ResNet50**
-2. **DenseNet121**
-3. **VGG16** 
-4. **Vision Transformer (ViT Base - DeiT3)** 
-5. **Custom CNN with DenseBlocks & Transition Layers**
+1. **ResNet50** (CNN.py)
+2. **DenseNet121** (CNN.py)
+3. **VGG16** (CNN.py)
+4. **Vision Transformer (ViT Base - DeiT3)**  (ViT.py)
+5. **Custom CNN with DenseBlocks & Transition Layers** (Custom_CNN.py)
 
 Additionally, a **Stacking Ensemble Model** was implemented, combining the predictions of ResNet50, DenseNet121, and ViT to improve overall performance.
 
