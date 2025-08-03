@@ -1,2 +1,3 @@
-#Classification-of-License-Plates-by-State
+# Classification-of-License-Plates-by-State
+
 The purpose of this project is to develop the license plate classification phase within an ALPR system focused on identifying license plates from different U.S. states. From the user's perspective, it seeks to facilitate the work of road safety agencies, police departments and operators of intelligent transportation systems. By enabling accurate classification of license plates by state, the system can help track vehicles involved in crime, toll evasion, theft or interstate pursuits, with the hope that the project will contribute to a safer, smarter and more connected road environment.
