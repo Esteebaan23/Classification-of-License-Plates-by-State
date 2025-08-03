@@ -45,7 +45,7 @@ Additionally, a **Stacking Ensemble Model** was implemented, combining the predi
 
 3. Run inference on a sample image:
     ```bash
-    python inference.py 
+    python main.py 
     ```
 
 4. Launch the Streamlit App:
