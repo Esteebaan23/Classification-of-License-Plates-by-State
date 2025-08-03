@@ -34,8 +34,8 @@ Additionally, a **Stacking Ensemble Model** was implemented, combining the predi
 ## Usage
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Esteebaan23/License-Plate-Recognition.git
-    cd License-Plate-Recognition
+    git clone https://github.com/Esteebaan23/Classification-of-License-Plates-by-State.git
+    cd Classification-of-License-Plates-by-State
     ```
 
 2. Install dependencies:
@@ -45,14 +45,11 @@ Additionally, a **Stacking Ensemble Model** was implemented, combining the predi
 
 3. Run inference on a sample image:
     ```bash
-    python inference.py --image path_to_image.jpg
+    python inference.py 
     ```
 
 4. Launch the Streamlit App:
     ```bash
-    streamlit run app.py
+    streamlit run main.py
     ```
 
-## Acknowledgments
-- Kaggle Dataset by **gpiosenka**.
-- Pre-trained models sourced from **PyTorch** and **HuggingFace Transformers**.
